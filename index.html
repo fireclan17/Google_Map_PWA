@@ -13,7 +13,7 @@
 </head>
 
 <style>
-    .myMap {
+    #myMap {
         width: 100%;
         height: 500px;
     }
@@ -21,19 +21,17 @@
 
 <body>
     <h1>Finding locations just became easier!</h1>
-    <div class="myMap">
-        <script>
-            function initMap() {
-                let kanpur = { lat: 26.449462, lng: 80.332029 };
-                let map = new google.maps.Map(
-                    document.getElementsByClassName("myMap"), { zoom = 4, center: kanpur }
-                );
-                let marker = new google.maps.Marker({ position: kanpur, map: map });
-            }
-        </script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkONZFX4PH0FJL_c3R2XrNbQB2hSy3Nk&callback=initMap"></script>
-    </div>
+    <div id="myMap"></div>
+    <script>
+        function initMap() {
+            let kanpur = { lat: 26.449462, lng: 80.332029 };
+            let map = new google.maps.Map(
+                document.getElementsById("myMap"), { zoom = 4, center: kanpur });
+            let marker = new google.maps.Marker({ position: kanpur, map: map });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkONZFX4PH0FJL_c3R2XrNbQB2hSy3Nk&callback=initMap"></script>
 </body>
 
 </html>
