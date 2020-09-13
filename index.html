@@ -32,7 +32,7 @@
         function initMap() {
             var kanpur = { lat: 26.449462, lng: 80.332029 };
             var map = new google.maps.Map(
-                document.getElementsById('myMap'), { zoom = 4, center: kanpur });
+                document.getElementById('myMap'), { zoom: 4, center: kanpur });
             var marker = new google.maps.Marker({ position: kanpur, map: map });
         }
 
