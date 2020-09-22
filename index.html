@@ -12,9 +12,36 @@
     <link rel="manifest" href="webAppManifest.json">
 
     <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(231, 223, 223);
+
+        }
+        h1{
+            color:orange;
+            transition: transform .3s ease-in-out;
+        }
+        h1:hover{
+            transform: scale(1.05);
+            coloR:black;
+            border-radius:3%;
+            box-shadow:1px 1px 4px black;
+        }
+
         #myMap {
-            width: 100%;
-            height: 100%;
+            margin-top:5rem;
+            width: 80%;
+            height: 80%;
+            box-shadow: 2px 2px 5px black;
+            transition: transform .3s ease-in-out;
+
+            
+        }
+        #myMap:hover{
+            transform: scale(1.05);
         }
     </style>
 
